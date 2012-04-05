@@ -19,6 +19,7 @@ You job is to refactor the code and make it readable, while keeping the code in 
   
   
 The primary goal is to refactor the code in Algorithm\Finder.cs – as it stands the code is incomprehensible. 
+The code in the MarginallyBetter is one possible way to improve the code, but I'm sure it could be better too ;)
 
 !!Tips!!
 
