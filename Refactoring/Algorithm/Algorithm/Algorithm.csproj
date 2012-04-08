@@ -43,12 +43,6 @@
     <Compile Include="Finder.cs" />
     <Compile Include="F.cs" />
     <Compile Include="FT.cs" />
-    <Compile Include="MarginallyBetter\Finder.cs" />
-    <Compile Include="MarginallyBetter\FindType.cs" />
-    <Compile Include="MarginallyBetter\Person.cs" />
-    <Compile Include="MarginallyBetter\PersonDifference.cs" />
-    <Compile Include="MarginallyBetter\PersonDifferenceList.cs" />
-    <Compile Include="MarginallyBetter\PersonList.cs" />
     <Compile Include="Thing.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
