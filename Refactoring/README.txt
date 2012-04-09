@@ -19,7 +19,6 @@ You job is to refactor the code and make it readable, while keeping the code in 
   
   
 The primary goal is to refactor the code in Algorithm\Finder.cs – as it stands the code is incomprehensible. 
-The code in the MarginallyBetter is one possible way to improve the code, but I'm sure it could be better too ;)
 
 !!Tips!!
 
@@ -30,7 +29,7 @@ The code in the MarginallyBetter is one possible way to improve the code, but I'
 
 -	See if you can also eliminate switch statements and multiple exit points from methods. 
 
-Anything is fair game in this lab – create new classes, new methods, and rename tests. 
+Anything is fair game  – create new classes, new methods, and rename tests. 
 The only restriction is that the existing tests have to keep working. 
 Lean on the tests and run them after every small change to make sure you are on the right path.
 
