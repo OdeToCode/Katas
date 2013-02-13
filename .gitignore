@@ -35,3 +35,6 @@ log.txt
 *.mov
 .idea
 .DS_Store
+*.sdf
+packages/
+TestResults/
