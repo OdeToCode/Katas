@@ -10,25 +10,25 @@ with a book on design patterns, the developer decided the Template Method patter
 ideal for enforcing a certain ordering on operations while still allowing subclasses to override
 and change the actual filtering and the calculations. 
 
-public abstract class PointsAggregator
-{
-	protected PointsAggregator(IEnumerable<Measurement> measurements)
+	public abstract class PointsAggregator
 	{
-		Measurements = measurements;
-	}
-
-	public virtual Measurement Aggregate()
-	{
-		var measurements = Measurements;
-		measurements = FilterMeasurements(measurements);
-		return AggregateMeasurements(measurements);
-	}
-
-	protected abstract IEnumerable<Measurement> FilterMeasurements(IEnumerable<Measurement> measurements);
-	protected abstract Measurement AggregateMeasurements(IEnumerable<Measurement> measurements);
-		
-	protected readonly IEnumerable<Measurement> Measurements;
-} 
+		protected PointsAggregator(IEnumerable<Measurement> measurements)
+		{
+			Measurements = measurements;
+		}
+	
+		public virtual Measurement Aggregate()
+		{
+			var measurements = Measurements;
+			measurements = FilterMeasurements(measurements);
+			return AggregateMeasurements(measurements);
+		}
+	
+		protected abstract IEnumerable<Measurement> FilterMeasurements(IEnumerable<Measurement> measurements);
+		protected abstract Measurement AggregateMeasurements(IEnumerable<Measurement> measurements);
+			
+		protected readonly IEnumerable<Measurement> Measurements;
+	} 
 
 From this base class the developer started creating different classes to represent 
 different calculations (along with unit tests).
