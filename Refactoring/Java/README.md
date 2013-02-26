@@ -7,15 +7,12 @@ You job is to refactor the code and make it readable, while keeping the code in 
 
 !!How To Start!!
 
-  1.	Open the solution file. 
+  1.	Run the tests with `mvn test` to make sure everything works.
 
-  2.	Run the tests to make sure everything is in working order.
-        Note: you'll need to use an jUnit 4 test runner. 
-
-  3.	Start refactoring! 
+  2.	Start refactoring! 
   
   
-The primary goal is to refactor the code in Algorithm\Finder.cs – as it stands the code is incomprehensible. 
+The primary goal is to refactor the code in `algorithm/Finder.java` – as it stands the code is incomprehensible. 
 
 !!Tips!!
 
