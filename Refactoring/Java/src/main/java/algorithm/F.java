@@ -1,4 +1,4 @@
-﻿package algorithm;
+package algorithm;
 public class F {
 	public Thing P1;
 	public Thing P2;
