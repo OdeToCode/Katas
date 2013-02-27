@@ -14,12 +14,12 @@ public class SummingAggregator extends PointsAggregator {
 	}
 
 	@Override
-	protected Collection<Measurement> filterMeasurements(Collection<Measurement> measurements) {
+	protected Collection<Measurement> filterMeasurements() {
 		return measurements;
 	}
 
 	@Override
-	protected Measurement aggregateMeasurements(Collection<Measurement> measurements) {
+	protected Measurement aggregateMeasurements() {
 		return new Measurement(sumX(measurements), sumY(measurements));
 	}
 }

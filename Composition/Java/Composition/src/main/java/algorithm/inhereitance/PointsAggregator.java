@@ -6,8 +6,8 @@ import algorithm.Measurement;
 
 public abstract class PointsAggregator {
 
-	protected abstract Collection<Measurement> filterMeasurements(Collection<Measurement> measurements);
-	protected abstract Measurement aggregateMeasurements(Collection<Measurement> measurements);
+	protected abstract Collection<Measurement> filterMeasurements();
+	protected abstract Measurement aggregateMeasurements();
 
 	protected Collection<Measurement> measurements;
 
@@ -16,8 +16,8 @@ public abstract class PointsAggregator {
 	}
 
 	public Measurement aggregate() {
-		measurements = filterMeasurements(measurements);
-		return aggregateMeasurements(measurements);
+		measurements = filterMeasurements();
+		return aggregateMeasurements();
 	}
 
 }
