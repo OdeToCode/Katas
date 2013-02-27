@@ -12,7 +12,7 @@ public class LowPassAveragingAggregator extends AveragingAggregator {
 	}
 
 	@Override
-	protected Collection<Measurement> filterMeasurements(Collection<Measurement> measurements) {
+	protected Collection<Measurement> filterMeasurements() {
 		return MeasurementUtil.WhereLessThanXandY(measurements, 100, 100);
 	}
 }
