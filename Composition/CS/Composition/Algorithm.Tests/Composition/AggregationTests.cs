@@ -54,7 +54,7 @@ namespace Algorithm.Tests.Composition
         /// Uncomment this test and make it pass by building a new class to 
         /// hide the "composition" of strategies and filters ...
         //[Fact]
-        //public void HighPassSummingAggregator_Applys_Filter()
+        //public void CustomHighPassSummingAggregator_Applys_Filter()
         //{                
         //    var aggregator = new HighPassSummingAggregator(_measurements);
 
