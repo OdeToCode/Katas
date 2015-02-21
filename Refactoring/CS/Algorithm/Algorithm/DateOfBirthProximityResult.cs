@@ -2,7 +2,7 @@
 
 namespace Algorithm
 {
-    public class F
+    public class DateOfBirthProximityResult
     {
         public Person P1 { get; set; }
         public Person P2 { get; set; }

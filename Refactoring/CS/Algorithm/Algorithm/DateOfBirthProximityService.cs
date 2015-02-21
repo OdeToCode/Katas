@@ -2,24 +2,24 @@
 
 namespace Algorithm
 {
-    public class Finder
+    public class DateOfBirthProximityService
     {
         private readonly List<Person> _p;
 
-        public Finder(List<Person> p)
+        public DateOfBirthProximityService(List<Person> p)
         {
             _p = p;
         }
 
-        public F Find(DateOfBirthProximity dateOfBirthProximity)
+        public DateOfBirthProximityResult Find(DateOfBirthProximity dateOfBirthProximity)
         {
-            var tr = new List<F>();
+            var tr = new List<DateOfBirthProximityResult>();
 
             for(var i = 0; i < _p.Count - 1; i++)
             {
                 for(var j = i + 1; j < _p.Count; j++)
                 {
-                    var r = new F();
+                    var r = new DateOfBirthProximityResult();
                     if(_p[i].BirthDate < _p[j].BirthDate)
                     {
                         r.P1 = _p[i];
@@ -37,10 +37,10 @@ namespace Algorithm
 
             if(tr.Count < 1)
             {
-                return new F();
+                return new DateOfBirthProximityResult();
             }
 
-            F answer = tr[0];
+            DateOfBirthProximityResult answer = tr[0];
             foreach(var result in tr)
             {
                 switch(dateOfBirthProximity)
