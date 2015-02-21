@@ -1,6 +1,6 @@
 ﻿namespace Algorithm
 {
-    public enum DateOfBirthProximity
+    public enum AgeDifference
     {
         Closest,
         Furthest

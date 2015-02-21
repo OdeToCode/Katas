@@ -40,9 +40,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DateOfBirthProximityService.cs" />
-    <Compile Include="DateOfBirthProximityResult.cs" />
-    <Compile Include="DateOfBirthProximity.cs" />
+    <Compile Include="AgeDifferenceService.cs" />
+    <Compile Include="AgeDifferenceResult.cs" />
+    <Compile Include="AgeDifference.cs" />
     <Compile Include="Person.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
