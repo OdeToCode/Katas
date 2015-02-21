@@ -20,8 +20,8 @@ namespace Algorithm.Test
 
             var result = finder.Find(DateOfBirthProximity.Closest);
 
-            Assert.Null(result.P1);
-            Assert.Null(result.P2);
+            Assert.Null(result.EldestPerson);
+            Assert.Null(result.YoungestPerson);
         }
 
         [Test]
@@ -32,8 +32,8 @@ namespace Algorithm.Test
 
             var result = finder.Find(DateOfBirthProximity.Closest);
 
-            Assert.That(result.P1, Is.Null);
-            Assert.That(result.P2, Is.Null);
+            Assert.That(result.EldestPerson, Is.Null);
+            Assert.That(result.YoungestPerson, Is.Null);
         }
 
         [Test]
@@ -44,8 +44,8 @@ namespace Algorithm.Test
 
             var result = finder.Find(DateOfBirthProximity.Furthest);
 
-            Assert.That(result.P1, Is.Null);
-            Assert.That(result.P2, Is.Null);
+            Assert.That(result.EldestPerson, Is.Null);
+            Assert.That(result.YoungestPerson, Is.Null);
         }
 
         [Test]
@@ -56,8 +56,8 @@ namespace Algorithm.Test
 
             var result = finder.Find(DateOfBirthProximity.Closest);
 
-            Assert.That(sue, Is.SameAs(result.P1));
-            Assert.That(greg, Is.SameAs(result.P2));
+            Assert.That(sue, Is.SameAs(result.EldestPerson));
+            Assert.That(greg, Is.SameAs(result.YoungestPerson));
         }
 
         [Test]
@@ -68,8 +68,8 @@ namespace Algorithm.Test
 
             var result = finder.Find(DateOfBirthProximity.Furthest);
 
-            Assert.That(greg, Is.SameAs(result.P1));
-            Assert.That(mike, Is.SameAs(result.P2));
+            Assert.That(greg, Is.SameAs(result.EldestPerson));
+            Assert.That(mike, Is.SameAs(result.YoungestPerson));
         }
 
         [Test]
@@ -80,8 +80,8 @@ namespace Algorithm.Test
 
             var result = finder.Find(DateOfBirthProximity.Closest);
 
-            Assert.That(sue, Is.SameAs(result.P1));
-            Assert.That(greg, Is.SameAs(result.P2));
+            Assert.That(sue, Is.SameAs(result.EldestPerson));
+            Assert.That(greg, Is.SameAs(result.YoungestPerson));
         }
 
         [Test]
@@ -92,8 +92,8 @@ namespace Algorithm.Test
 
             var result = finder.Find(DateOfBirthProximity.Furthest);
 
-            Assert.That(sue, Is.SameAs(result.P1));
-            Assert.That(mike, Is.SameAs(result.P2));
+            Assert.That(sue, Is.SameAs(result.EldestPerson));
+            Assert.That(mike, Is.SameAs(result.YoungestPerson));
         }
 
         [Test]
@@ -104,8 +104,8 @@ namespace Algorithm.Test
 
             var result = finder.Find(DateOfBirthProximity.Furthest);
 
-            Assert.That(sue, Is.SameAs(result.P1));
-            Assert.That(sarah, Is.SameAs(result.P2));
+            Assert.That(sue, Is.SameAs(result.EldestPerson));
+            Assert.That(sarah, Is.SameAs(result.YoungestPerson));
         }
 
         [Test]
@@ -116,8 +116,8 @@ namespace Algorithm.Test
 
             var result = finder.Find(DateOfBirthProximity.Closest);
 
-            Assert.That(sue, Is.SameAs(result.P1));
-            Assert.That(greg, Is.SameAs(result.P2));
+            Assert.That(sue, Is.SameAs(result.EldestPerson));
+            Assert.That(greg, Is.SameAs(result.YoungestPerson));
         }
 
     }

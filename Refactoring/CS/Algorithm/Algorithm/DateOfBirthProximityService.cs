@@ -22,15 +22,15 @@ namespace Algorithm
                     var r = new DateOfBirthProximityResult();
                     if(_p[i].BirthDate < _p[j].BirthDate)
                     {
-                        r.P1 = _p[i];
-                        r.P2 = _p[j];
+                        r.EldestPerson = _p[i];
+                        r.YoungestPerson = _p[j];
                     }
                     else
                     {
-                        r.P1 = _p[j];
-                        r.P2 = _p[i];
+                        r.EldestPerson = _p[j];
+                        r.YoungestPerson = _p[i];
                     }
-                    r.D = r.P2.BirthDate - r.P1.BirthDate;
+                    r.D = r.YoungestPerson.BirthDate - r.EldestPerson.BirthDate;
                     tr.Add(r);
                 }
             }
