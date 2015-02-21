@@ -4,9 +4,9 @@ namespace Algorithm
 {
     public class Finder
     {
-        private readonly List<Thing> _p;
+        private readonly List<Person> _p;
 
-        public Finder(List<Thing> p)
+        public Finder(List<Person> p)
         {
             _p = p;
         }
