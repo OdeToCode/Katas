@@ -18,7 +18,7 @@ namespace Algorithm.Test
             var list = new List<Person>();
             var finder = new Finder(list);
 
-            var result = finder.Find(FT.One);
+            var result = finder.Find(DateOfBirthProximity.Closest);
 
             Assert.Null(result.P1);
             Assert.Null(result.P2);
@@ -30,7 +30,7 @@ namespace Algorithm.Test
             var list = new List<Person>() { sue };
             var finder = new Finder(list);
 
-            var result = finder.Find(FT.One);
+            var result = finder.Find(DateOfBirthProximity.Closest);
 
             Assert.That(result.P1, Is.Null);
             Assert.That(result.P2, Is.Null);
@@ -42,7 +42,7 @@ namespace Algorithm.Test
             var list = new List<Person>() { sue };
             var finder = new Finder(list);
 
-            var result = finder.Find(FT.Two);
+            var result = finder.Find(DateOfBirthProximity.Furthest);
 
             Assert.That(result.P1, Is.Null);
             Assert.That(result.P2, Is.Null);
@@ -54,7 +54,7 @@ namespace Algorithm.Test
             var list = new List<Person>() { sue, greg };
             var finder = new Finder(list);
 
-            var result = finder.Find(FT.One);
+            var result = finder.Find(DateOfBirthProximity.Closest);
 
             Assert.That(sue, Is.SameAs(result.P1));
             Assert.That(greg, Is.SameAs(result.P2));
@@ -66,7 +66,7 @@ namespace Algorithm.Test
             var list = new List<Person>() { greg, mike };
             var finder = new Finder(list);
 
-            var result = finder.Find(FT.Two);
+            var result = finder.Find(DateOfBirthProximity.Furthest);
 
             Assert.That(greg, Is.SameAs(result.P1));
             Assert.That(mike, Is.SameAs(result.P2));
@@ -78,7 +78,7 @@ namespace Algorithm.Test
             var list = new List<Person>() { sue, greg, mike };
             var finder = new Finder(list);
 
-            var result = finder.Find(FT.One);
+            var result = finder.Find(DateOfBirthProximity.Closest);
 
             Assert.That(sue, Is.SameAs(result.P1));
             Assert.That(greg, Is.SameAs(result.P2));
@@ -90,7 +90,7 @@ namespace Algorithm.Test
             var list = new List<Person>() { greg, mike, sue };
             var finder = new Finder(list);
 
-            var result = finder.Find(FT.Two);
+            var result = finder.Find(DateOfBirthProximity.Furthest);
 
             Assert.That(sue, Is.SameAs(result.P1));
             Assert.That(mike, Is.SameAs(result.P2));
@@ -102,7 +102,7 @@ namespace Algorithm.Test
             var list = new List<Person>() { greg, mike, sarah, sue };
             var finder = new Finder(list);
 
-            var result = finder.Find(FT.Two);
+            var result = finder.Find(DateOfBirthProximity.Furthest);
 
             Assert.That(sue, Is.SameAs(result.P1));
             Assert.That(sarah, Is.SameAs(result.P2));
@@ -114,7 +114,7 @@ namespace Algorithm.Test
             var list = new List<Person>() { greg, mike, sarah, sue };
             var finder = new Finder(list);
 
-            var result = finder.Find(FT.One);
+            var result = finder.Find(DateOfBirthProximity.Closest);
 
             Assert.That(sue, Is.SameAs(result.P1));
             Assert.That(greg, Is.SameAs(result.P2));
