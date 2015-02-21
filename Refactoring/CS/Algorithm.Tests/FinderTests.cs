@@ -73,6 +73,30 @@ namespace Algorithm.Test
         }
 
         [Test]
+        public void Returns_Closest_Two_For_Three_People()
+        {
+            var list = new List<Person>() { sue, greg, mike };
+            var finder = new Finder(list);
+
+            var result = finder.Find(FT.One);
+
+            Assert.That(sue, Is.SameAs(result.P1));
+            Assert.That(greg, Is.SameAs(result.P2));
+        }
+
+        [Test]
+        public void Returns_Furthest_Two_For_Three_People()
+        {
+            var list = new List<Person>() { greg, mike, sue };
+            var finder = new Finder(list);
+
+            var result = finder.Find(FT.Two);
+
+            Assert.That(sue, Is.SameAs(result.P1));
+            Assert.That(mike, Is.SameAs(result.P2));
+        }
+
+        [Test]
         public void Returns_Furthest_Two_For_Four_People()
         {
             var list = new List<Person>() { greg, mike, sarah, sue };
