@@ -27,22 +27,20 @@ namespace Algorithm
                     possibleResults.Add(possibleResult);
                 }
             }
-
-            if(possibleResults.Count < 1)
-            {
-                return new AgeDifference();
-            }
-
             possibleResults.Sort();
+
+            AgeDifference response = null;
             switch (ageDifferenceType)
             {
                 case AgeDifferenceType.Closest:
-                    return possibleResults.First();
+                    response = possibleResults.FirstOrDefault();
+                    break;
 
                 case AgeDifferenceType.Furthest:
-                    return possibleResults.Last();
+                    response = possibleResults.LastOrDefault();
+                    break;
             }
-            return new AgeDifference();
+            return response ?? new AgeDifference();
         }
     }
 }
