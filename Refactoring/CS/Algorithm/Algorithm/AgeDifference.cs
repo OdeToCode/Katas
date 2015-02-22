@@ -1,8 +1,11 @@
-﻿namespace Algorithm
+﻿using System;
+
+namespace Algorithm
 {
-    public enum AgeDifference
+    public class AgeDifference
     {
-        Closest,
-        Furthest
+        public Person EldestPerson { get; set; }
+        public Person YoungestPerson { get; set; }
+        public TimeSpan DifferenceInAge { get; set; }
     }
 }

@@ -2,24 +2,24 @@
 
 namespace Algorithm
 {
-    public class AgeDifferenceService
+    public class AgeDifferenceFactory
     {
         private readonly List<Person> _people;
 
-        public AgeDifferenceService(List<Person> people)
+        public AgeDifferenceFactory(List<Person> people)
         {
             _people = people;
         }
 
-        public AgeDifferenceResult Find(AgeDifference ageDifference)
+        public AgeDifference Find(AgeDifferenceType ageDifferenceType)
         {
-            var possibleResults = new List<AgeDifferenceResult>();
+            var possibleResults = new List<AgeDifference>();
 
             for(var i = 0; i < _people.Count - 1; i++)
             {
                 for(var j = i + 1; j < _people.Count; j++)
                 {
-                    var possibleResult = new AgeDifferenceResult();
+                    var possibleResult = new AgeDifference();
                     if(_people[i].BirthDate < _people[j].BirthDate)
                     {
                         possibleResult.EldestPerson = _people[i];
@@ -37,22 +37,22 @@ namespace Algorithm
 
             if(possibleResults.Count < 1)
             {
-                return new AgeDifferenceResult();
+                return new AgeDifference();
             }
 
-            AgeDifferenceResult answer = possibleResults[0];
+            AgeDifference answer = possibleResults[0];
             foreach(var result in possibleResults)
             {
-                switch(ageDifference)
+                switch(ageDifferenceType)
                 {
-                    case AgeDifference.Closest:
+                    case AgeDifferenceType.Closest:
                         if(result.DifferenceInAge < answer.DifferenceInAge)
                         {
                             answer = result;
                         }
                         break;
 
-                    case AgeDifference.Furthest:
+                    case AgeDifferenceType.Furthest:
                         if(result.DifferenceInAge > answer.DifferenceInAge)
                         {
                             answer = result;
