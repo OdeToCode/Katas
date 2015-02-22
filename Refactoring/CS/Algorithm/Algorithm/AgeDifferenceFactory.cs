@@ -23,7 +23,6 @@ namespace Algorithm
                     var firstPerson = _people[i];
                     var secondPerson = _people[j];
                     possibleResult.SetPeople(firstPerson, secondPerson);
-                    possibleResult.DifferenceInAge = possibleResult.YoungestPerson.BirthDate - possibleResult.EldestPerson.BirthDate;
                     possibleResults.Add(possibleResult);
                 }
             }
