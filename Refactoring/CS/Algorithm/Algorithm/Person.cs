@@ -2,14 +2,14 @@
 
 namespace Algorithm
 {
-    public class Person
+    public class Person : IComparable<Person>
     {
         public string Name { get; set; }
         public DateTime BirthDate { get; set; }
 
-        public bool IsOlderThan(Person secondPerson)
+        public int CompareTo(Person other)
         {
-            return BirthDate.CompareTo(secondPerson.BirthDate) < 0;
+            return BirthDate.CompareTo(other.BirthDate);
         }
     }
 }

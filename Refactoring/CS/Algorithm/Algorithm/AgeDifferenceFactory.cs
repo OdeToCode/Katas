@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Linq;
 
 namespace Algorithm
 {
@@ -32,28 +33,16 @@ namespace Algorithm
                 return new AgeDifference();
             }
 
-            AgeDifference answer = possibleResults[0];
-            foreach(var result in possibleResults)
+            possibleResults.Sort();
+            switch (ageDifferenceType)
             {
-                switch(ageDifferenceType)
-                {
-                    case AgeDifferenceType.Closest:
-                        if(result.DifferenceInAge < answer.DifferenceInAge)
-                        {
-                            answer = result;
-                        }
-                        break;
+                case AgeDifferenceType.Closest:
+                    return possibleResults.First();
 
-                    case AgeDifferenceType.Furthest:
-                        if(result.DifferenceInAge > answer.DifferenceInAge)
-                        {
-                            answer = result;
-                        }
-                        break;
-                }
+                case AgeDifferenceType.Furthest:
+                    return possibleResults.Last();
             }
-
-            return answer;
+            return new AgeDifference();
         }
     }
 }
