@@ -20,16 +20,9 @@ namespace Algorithm
                 for(var j = i + 1; j < _people.Count; j++)
                 {
                     var possibleResult = new AgeDifference();
-                    if(_people[i].BirthDate < _people[j].BirthDate)
-                    {
-                        possibleResult.EldestPerson = _people[i];
-                        possibleResult.YoungestPerson = _people[j];
-                    }
-                    else
-                    {
-                        possibleResult.EldestPerson = _people[j];
-                        possibleResult.YoungestPerson = _people[i];
-                    }
+                    var firstPerson = _people[i];
+                    var secondPerson = _people[j];
+                    possibleResult.SetPeople(firstPerson, secondPerson);
                     possibleResult.DifferenceInAge = possibleResult.YoungestPerson.BirthDate - possibleResult.EldestPerson.BirthDate;
                     possibleResults.Add(possibleResult);
                 }
