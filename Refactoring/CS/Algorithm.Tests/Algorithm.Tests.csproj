@@ -31,6 +31,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="nunit.framework">
+      <HintPath>..\packages\NUnit.2.6.4\lib\nunit.framework.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -43,7 +46,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="FinderTests.cs" />
+    <Compile Include="AgeDifferenceTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

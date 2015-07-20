@@ -42,3 +42,4 @@ log.txt
 *.sdf
 packages/
 TestResults/
+*.jf
